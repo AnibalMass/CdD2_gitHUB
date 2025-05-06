@@ -1,0 +1,48 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Consigna práctica de aplicación
+
+# Parte I. Carga de datos espaciales
+
+1.  Buscar en el portal Buenos Aires Data
+    (<https://data.buenosaires.gob.ar/dataset/>) los data sets que
+    contienen el trayecto de las vías y estaciones de ferrocarril.
+2.  Además, en el portal de Datos Argentina (<https://datos.gob.ar/>)
+    buscar los Radios censales del AMBA.
+3.  Con estos data sets homogeneizar la proyección entre ambos,
+    eligiendo una que sea adecuada para el el área de estudio (AMBA).
+4.  Asegurarse que las geometrías sean válidas (corregir en caso de ser
+    necesario).
+5.  Obtener un "bounding box" de la zona de trabajo. ¿Cómo podemos
+    interpretar esta información?
+6.  Describir brevemente los atributos que acompañan estos datasets.
+    Para ello utilizar un gráfico hecho con ggplot que utilice al menos
+    dos capas de datos espaciales.
+7.  Pensar alguna pregunta que pueda ser interesante responder con estos
+    datos. ¿Es necesario un nuevo data set para responder esta pregunta?
+
+# Parte II. Operaciones con atributos
+
+8.  Recuperando los datos y el análisis hecho en la clase anterior,
+    visualizar conjuntamente en un mapa los radios censales, las líneas
+    y estaciones de FFCC. Agregar una capa que permita distinguir las
+    dos jurisdicciones principales que componen el AMBA y los partidos
+    (sólo para PBA).
+9.  Descargar datos sobre la cantidad de población de los radios radios
+    del portal poblaciones (poblaciones.org) referidos al AMBA (24
+    Partidos + CABA). Los datos que se descarguen deben ser datos sin
+    geografía (csv).
+10. Generar una unión de los datos de población con los datos de radios.
+11. Visualizar la densidad de población de los radios (agregar una capa
+    con los límites jurisdiccionales).
+12. Visualizar la densidad de población infantil (0-17 años) y adulta
+    mayor (+70 años)de los radios.
+13. Visualice conjuntamente los puntos 11 y 12. ¿Existen diferencias en
+    la distribución de estas poblaciones y la población general?
+14. Agregar a la visualización anterior (punto 13) el mapa de las
+    estaciones y líneas de FFCC. ¿Cree que existe una buena conectividad
+    para estas personas?

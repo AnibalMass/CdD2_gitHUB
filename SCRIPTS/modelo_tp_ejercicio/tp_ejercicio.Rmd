@@ -1,0 +1,36 @@
+---
+title: "Trabajo Práctico - Movilidad Urbana"
+author: "Tu Nombre"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+# Podés usar el script externo
+source("tp_ejercicio.R")
+```
+
+## Introducción
+
+Este trabajo práctico aborda el análisis de datos de movilidad urbana...
+
+## Carga de Datos
+
+```{r cargar-datos}
+# Cambiar la ruta según corresponda
+datos <- cargar_datos("datos/movilidad.csv")
+head(datos)
+```
+
+## Análisis Exploratorio
+
+```{r analisis}
+resumen_variables(datos)
+```
+
+## Conclusión
+
+Aquí irán las conclusiones del trabajo práctico.
