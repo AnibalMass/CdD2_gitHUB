@@ -45,16 +45,16 @@ library(sf)
   unzip(zipfile = fs::path(td, "estaciones.zip"),
         exdir = td)
   FFCC_est4 <- read_sf(fs::path(td, "estaciones_ferrocarril.shp"))
-  rm(td)
+  ## rm(td)    # BORRADO de la carpeta temporal
 
   # Selecciono uno
   FFCC_est <- FFCC_est3
-  rm(FFCC_est1, FFCC_est2, FFCC_est3, FFCC_est4)
+  ##  rm(FFCC_est1, FFCC_est2, FFCC_est3, FFCC_est4)  # BORRADO 
 
   # 1.b. Cargar datos de red ferroviaria
   FFCC_red <- read_sf(paste(url_ffcc, "red-de-ferrocarril.geojson", sep = "/"))
 
-  rm(url_ffcc, url_GCBA)
+  ##  rm(url_ffcc, url_GCBA)   # BORRADO 
 
 # 2. Además, en el portal de Datos Argentina (https://datos.gob.ar/) buscar los
 #     Radios censales del AMBA.
@@ -68,9 +68,9 @@ library(sf)
 
   CARTO <- list(FFCC_red = FFCC_red,
                 FFCC_est = FFCC_est,
-                radios = radios)
+                radios = radios)   ######## ERROR ???????
 
-  rm(FFCC_red, FFCC_est, radios)
+  ##  rm(FFCC_red, FFCC_est, radios)   # BORRADO 
 
   CARTO$FFCC_red <- st_transform(CARTO$FFCC_red, 5347)
   CARTO$FFCC_est <- st_transform(CARTO$FFCC_est, st_crs(FFCC_red))
